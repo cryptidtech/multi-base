@@ -7,7 +7,7 @@ authors = [
     "Dave Grantham <dwg@linuxprogrammer.org>",
 ]
 edition = "2024"
-rust-version = "1.85"
+rust-version = "1.99"
 license = "MIT"
 description = "Command-line multibase encoder/decoder"
 repository = "https://github.com/cryptidtech/multi-base.git"

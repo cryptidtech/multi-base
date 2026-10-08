@@ -67,7 +67,7 @@ For `no_std` environments:
 multi-base = { version = "1.1", default-features = false }
 ```
 
-MSRV: Rust 1.85 (Edition 2024).
+MSRV: Rust 1.99 (Edition 2024).
 
 ## Usage
 
