@@ -5,6 +5,17 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-10-08
+
+### Changed
+- Raised `rust-version` from 1.85 to 1.99 in `Cargo.toml`. The `cli` and
+  `fuzz` manifests declare the same floor. The CI MSRV job now installs
+  Rust 1.99.0. The README MSRV line reads 1.99. A minor release carries
+  this change. A raised MSRV is possibly breaking under the Cargo book
+  rules.
+- Fixed the clippy 0.1.99 `assert_is_empty` findings in the integration
+  and security tests. No public API changes.
+
 ## [1.0.4] - 2026-07-29
 
 ### Changed
@@ -164,6 +175,7 @@ Rust 1.85 (Edition 2024).
 3. `#[non_exhaustive]` added to `Error` enum.
 4. Edition updated to 2021.
 
+[1.1.0]: https://github.com/cryptidtech/multi-base/compare/v1.0.4...v1.1.0
 [1.0.4]: https://github.com/cryptidtech/multi-base/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/cryptidtech/multi-base/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/cryptidtech/multi-base/compare/v1.0.1...v1.0.2

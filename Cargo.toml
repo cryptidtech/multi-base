@@ -1,9 +1,9 @@
 [package]
 name = "multi-base"
-version = "1.0.4"
+version = "1.1.0"
 authors = ["Friedel Ziegelmayer <dignifiedquire@gmail.com>", "Dave Grantham <dwg@linuxprogrammer.org>"]
 edition = "2024"
-rust-version = "1.85"
+rust-version = "1.99"
 license = "MIT"
 readme = "README.md"
 description = "multibase in rust"
@@ -16,7 +16,7 @@ default = ["std"]
 std = ["data-encoding/std"]
 
 [dependencies]
-base-x = { version = "0.2", default-features = false }
+base-x = { version = "0.3", default-features = false }
 data-encoding = { version = "2.11", default-features = false, features = ["alloc"] }
 data-encoding-macro = "0.1"
 thiserror = { version = "2.0", default-features = false }

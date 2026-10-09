@@ -252,7 +252,7 @@ fn test_capacity_calculation_safety() {
 
         // Test that capacity calculations don't overflow
         let encoded = encode(Base::Base64, &data);
-        assert!(!encoded.is_empty());
+        assert_ne!(encoded, "");
 
         // Verify decode works
         let (base, decoded) = decode(&encoded, true).unwrap();

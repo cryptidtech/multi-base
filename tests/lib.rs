@@ -304,11 +304,11 @@ fn error_traits() {
 
     // Test Debug
     let debug_str = format!("{error:?}");
-    assert!(!debug_str.is_empty());
+    assert_ne!(debug_str, "");
 
     // Test Display (from thiserror)
     let display_str = format!("{error}");
-    assert!(!display_str.is_empty());
+    assert_ne!(display_str, "");
     assert!(display_str.contains("empty"));
 }
 
@@ -405,7 +405,7 @@ fn test_encode_into_all_bases() {
     for base in bases {
         encode_into(base, input, &mut buffer);
         assert!(buffer.starts_with(base.code()));
-        assert!(!buffer.is_empty());
+        assert_ne!(buffer, "");
     }
 }
 
@@ -562,7 +562,7 @@ fn test_decode_into_loop_performance() {
     // This should reuse the buffer across iterations
     for input in inputs {
         let _base = decode_into(input, true, &mut buffer).unwrap();
-        assert!(!buffer.is_empty());
+        assert_ne!(buffer, Vec::<u8>::new());
     }
 }
 
@@ -1092,7 +1092,7 @@ fn test_all_error_variants() {
     // All errors should support Debug
     let err = Error::EmptyInput;
     let debug = format!("{err:?}");
-    assert!(!debug.is_empty());
+    assert_ne!(debug, "");
 }
 
 /// Test concurrent encoding/decoding doesn't cause issues.
