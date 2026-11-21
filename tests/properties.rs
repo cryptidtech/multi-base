@@ -91,7 +91,7 @@ proptest! {
             "encoded string should start with base code {:?}", code);
     }
 
-    /// Property: encode_into produces same result as encode
+    /// Property: `encode_into` produces same result as encode
     #[test]
     fn prop_encode_into_matches_encode(data: Vec<u8>, base_idx: usize) {
         let bases = all_bases();
@@ -106,7 +106,7 @@ proptest! {
         prop_assert_eq!(&buffer, &expected, "encode_into mismatch for {:?}", base);
     }
 
-    /// Property: decode_into produces same result as decode
+    /// Property: `decode_into` produces same result as decode
     #[test]
     fn prop_decode_into_matches_decode(data: Vec<u8>, base_idx: usize) {
         let bases = all_bases();
@@ -210,7 +210,7 @@ proptest! {
         }
     }
 
-    /// Property: EncodedString validation and decoding consistency
+    /// Property: `EncodedString` validation and decoding consistency
     #[test]
     fn prop_encoded_string_consistency(data: Vec<u8>, base_idx: usize) {
         use multi_base::{encode_to_validated, parse_encoded};

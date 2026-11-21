@@ -13,7 +13,12 @@ categories = ["encoding"]
 
 [features]
 default = ["std"]
+# Feature names required by the shared family CI workflow test step. No code
+# in this crate gates on these yet.
+deprecated = []
+legacy_chacha20_fallback = []
 std = ["data-encoding/std"]
+wasm = []
 
 [dependencies]
 base-x = { version = "0.3", default-features = false }
